@@ -62,45 +62,6 @@
 <p/>
 <br/><br/><br/>
 
-## '이예지'의 Key summary
- > 제 담당파트는 크게 **시큐리티**, **상품 등록하기**, **바다톡(채팅)** 으로 나눌 수 있습니다. 이 외의 파트에도 여기저기 참여했지만요!
-<br/>
-
-* **_시큐리티_**
----------------
-
-UserDetails를 커스텀하여 [MemberDTO.java](https://github.com/yeeahji/git_finalProject/blob/main/finalProject/src/main/java/member/bean/MemberDTO.java)를 생성했습니다.
-
-UserDetailsService를 implements한 [MemberServiceImpl.java](https://github.com/yeeahji/git_finalProject/blob/main/finalProject/src/main/java/member/service/MemberServiceImpl.java)에서 커스텀한 UserDetails(= MemberDTO)에 사용자 정보를 넣어주었습니다. JAVA에서 사용자 정보를 가져오기 위해 Principal 혹은 @AuthenticationPrincipal를 사용하였고, JSP에서는 시큐리티 태그를 사용하였습니다.
-
-로그아웃 실패 시 부가작업을 커스텀하기 위해 [MemberLoginFailHandler.java](https://github.com/yeeahji/git_finalProject/blob/main/finalProject/src/main/java/member/service/MemberLoginFailHandler.java)를 생성하였습니다.
-
-이 외에도 자동 로그인, 로그인 페이지 커스텀, 접근 권한 에러 페이지 커스텀, 비밀번호 암호화 등을 구현했으며 [security-context.xml](https://github.com/yeeahji/git_finalProject/blob/main/finalProject/src/main/webapp/WEB-INF/spring/security-context.xml)에서 확인할 수 있습니다.
-<br/><br/>
-
-* **_상품 등록하기_**
----------------
-
-상품 등록에 관한 프론트, 백 모두 구현하였습니다.
-
-이미지는 최대 5개 첨부 가능하며 미리보기 및 대표이미지 설정이 가능합니다. 우편번호 및 지도 API를 사용하였고 연관태그의 입력을 시각화하였습니다.   
-
-코드는 [registForm.jsp](https://github.com/yeeahji/git_finalProject/blob/main/finalProject/src/main/webapp/product/registForm.jsp)와 [registForm.js](https://github.com/yeeahji/git_finalProject/blob/main/finalProject/src/main/webapp/js/product/registForm.js) 그리고 [product.java](https://github.com/yeeahji/git_finalProject/tree/main/finalProject/src/main/java/product)에서 확인할 수 있습니다. (CSS 관련 파일은 따로 링크 걸지 않았습니다)
-<br/><br/>
-
-* **_바다톡(채팅)_**
----------------
-
-중고 거래라는 특성으로 인해 이 사이트의 거래는 채팅으로 이루어집니다. 채팅에 관한 프론트, 백 모두 구현하였으며 웹소켓을 이용했습니다.   
-
-메인의 헤더에 있는 바다톡, 상품 상세페이지, 상대방의 상점 페이지에서 채팅방으로 접근이 가능하며 상품 상세페이지에서 접근 시 해당 상품에 관심이 있다는 메시지와 링크가 자동으로 전송됩니다. 금지 언어, 금지 태그가 설정되어 있습니다. 상대방의 온라인/오프라인 표시와 실시간 알림 기능이 있으며 이모티콘 전송와 주소 전송이 가능하고 이 모든 메시지 내용은 저장됩니다.   
-
-이미지 전송 기능이 있으나 5KB라는 용량 제한이 있어 사용자가 <img> 태그를 직접 입력하는 식으로 이루어집니다. 그리하여 추후 개선점으로 채팅방 내에서 주고받는 이미지도 상품 등록 페이지처럼 서버에 저장하여 보다 제약없는 이미지 전송이 가능하도록 업데이트 할 예정에 있습니다.   
-
-코드는 [chat.js](https://github.com/yeeahji/git_finalProject/tree/main/finalProject/src/main/webapp/js/chat)와 [chat.jsp](https://github.com/yeeahji/git_finalProject/tree/main/finalProject/src/main/webapp/chat) 그리고 [chat.java](https://github.com/yeeahji/git_finalProject/tree/main/finalProject/src/main/java/chat)에서 확인할 수 있습니다. (CSS 관련 파일은 따로 링크 걸지 않았습니다)   
-<br/><br/><br/>
-
-
 ## 사용 화면 예시 (일부분)
 
  > 상품 등록하기  /  상품 상세페이지  /  신고하기
