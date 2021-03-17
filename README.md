@@ -23,14 +23,14 @@
 * 개발 환경
   * O/S - Windows 10 64bit
   * WAS - Apache Tomcat/9.0
-  * RDBMS - Oracle
+  * DBMS - Oracle
   * Pattern - Eclipse / SQL Developer
 * 사용 언어 및 기술
   * JAVA, Spring Security, Websockets, Maven
   * Java Script, HTML, CSS, JSP, jQuery, AJAX, JSON, XML
   * Spring Framework, myBatis, Bootstrap
   * 카카오 로그인 API, 카카오 우편번호 API
-  * 그리고 Github :)
+  * Github 
 <br/><br/><br/>
 
 
